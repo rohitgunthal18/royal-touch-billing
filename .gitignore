@@ -2,22 +2,30 @@
 node_modules/
 client/node_modules/
 
-# Database
+# Database files - don't commit database
 data/*.db
+data/*.db-journal
 data/*.sqlite
+data/*.sqlite3
+*.db
+*.sqlite
 
-# Uploads (keep .gitkeep)
-uploads/*
+# Uploads folder - should not be in git
+uploads/
 !uploads/.gitkeep
 
-# Build
+# Build outputs
 client/dist/
 build/
+dist/
 
-# Environment
+# Environment variables
 .env
 .env.local
+.env.production
+.env.development
 .env.*.local
+.env*.local
 
 # IDE
 .vscode/
@@ -28,15 +36,30 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# Package lock files (optional - some prefer to commit these)
+# package-lock.json
+# client/package-lock.json
 
 # Misc
 *.bak
 *.tmp
+.cache/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
 
 
