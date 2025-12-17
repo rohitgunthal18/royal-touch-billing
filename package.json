@@ -11,7 +11,8 @@
     "dev:server": "node server/index.js",
     "dev:client": "cd client && npm run dev",
     "build": "cd client && npm run build",
-    "start": "NODE_ENV=production node server/index.js",
+    "build:server": "npm install",
+    "start": "node server/index.js",
     "setup": "npm install && cd client && npm install"
   },
   "dependencies": {
